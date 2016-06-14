@@ -14,7 +14,7 @@ namespace Sudoku_UnitTests
             {
                 for (int col = 0; col < 9; col++)
                 {
-                    int box = Program.GetBoxNumber(col, row);
+                    int box = SudokuGrid.GetBoxNumber(col, row);
                     if (col <= 2 && row <= 2) Assert.AreEqual(0, box);
                     else if (col >= 3 && col <= 5 && row <= 2) Assert.AreEqual(1, box);
                     else if (col >= 6 && row <= 2) Assert.AreEqual(2, box);
