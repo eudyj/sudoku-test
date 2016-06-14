@@ -84,17 +84,9 @@
             return newValues;
         }
 
-        private static int GetBoxNumber(int column, int row)
+        internal static int GetBoxNumber(int column, int row)
         {
-            if (column <= 2 && row <= 2) return 0;
-            if (column >= 3 && column <= 5 && row <= 2) return 1;
-            if (column >= 6 && row <= 2) return 2;
-            if (column <= 2 && row >= 3 && row <= 5) return 3;
-            if (column >= 3 && column <= 5 && row >= 3 && row <= 5) return 4;
-            if (column >= 6 && row >= 3 && row <= 5) return 5;
-            if (column <= 2 && row >= 6) return 6;
-            if (column >= 3 && column <= 5 && row >= 6) return 7;
-            return 8;
+            return 3 * (row / 3) + (column / 3);
         }
     }
 }
